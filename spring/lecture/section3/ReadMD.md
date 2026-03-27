@@ -16,11 +16,13 @@ public class MemberServiceimpl implements MemberService {
     }
 }
 
-<!-- 구현체가 아니라 인터페이스 타입으로 선언 MemberServiceImpl은 MemberRepository라는 역할에 의존하고, 실제 동작은 MemoryMemberRepository 객체를 만들어 사용한다.
-여기서 join()은 직접 저장하지 않아. 그냥 memberRepository에게 “저장해줘”라고 시키는 거야. 근데 실제 들어있는 객체는 MemoryMemberRepository니까, 실제로는 그 구현체의 save()가 실행돼.
--->
+
 
 private final MemberRepository memberRepository;
 public MemberServiceImpl(MemberRepository memberRepository) {
     this.memberRepository = memberRepository;
 }
+
+<!-- 구현체가 아니라 인터페이스 타입으로 선언 MemberServiceImpl은 MemberRepository라는 역할에 의존하고, 실제 동작은 MemoryMemberRepository 객체를 만들어 사용한다.
+여기서 join()은 직접 저장하지 않아. 그냥 memberRepository에게 “저장해줘”라고 시키는 거야. 근데 실제 들어있는 객체는 MemoryMemberRepository니까, 실제로는 그 구현체의 save()가 실행돼.
+-->
