@@ -45,4 +45,4 @@ POST /members/signup
   "password": "1234",
   "name": "kim"
 }
-'''
+
