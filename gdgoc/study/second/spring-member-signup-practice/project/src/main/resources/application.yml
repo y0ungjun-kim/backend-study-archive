@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/backend_study
+    username: postgres
+    password: 1045
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
