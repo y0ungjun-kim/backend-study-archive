@@ -39,3 +39,13 @@ loginRequest.password = "1234";
 스프링/Jackson이 JSON 데이터를 DTO 객체로 변환하기 위해 사용하는 생성자
 
 
+반면에 이 생성자는,
+```
+public SignupRequest(String email, String password) {
+    this.email = email;
+    this.password = password;
+}```
+
+우리가 코드에서 직접 객체를 만들 때 주로 씁니다.
+
+```SignupRequest request = new SignupRequest("test@inha.edu", "12345678");```
